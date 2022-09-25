@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="refresh" content="5; url=https://www.sakuras.cloud">
+	<!-- <meta http-equiv="refresh" content="5; url=https://www.sakuras.cloud"> -->
 	<title>樱花云 - 全球网络中继服务，随时随处尽情使用</title>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" href="https://fonts.loli.net/css?family=Karla:400%7CPoppins:400,400i,500,700">
@@ -66,6 +66,7 @@
 	    		<p>全球200+高速节点，国际专线通全球，随时随处尽情使用！</p>
 	    	    <p>樱花云 / sakuras.github.io</p>
 	    	    <a class="about" id="link"  href="#">最新地址</a>
+	    	    <span id="show"></span>
 	    	</div>
 	    </div>
 	</section>
@@ -75,5 +76,19 @@
 		window.location.href="https://www.sakuras.cloud";
     }
 </script>
+
+<script type="text/javascript"> 
+    var t = 10;//设定跳转的时间 
+    setInterval("refer()", 1000); 
+    function refer() {
+        if (t == 0){
+            location = "https://www.sakuras.cloud";
+        }
+        document.getElementById('show').innerHTML = "" + t + "秒后跳转转到樱花云";
+        t--;
+    } 
+</script>
+<span id="show"></span>
+
 </body>
 </html>
